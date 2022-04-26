@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+	<title>Mario Yordanov</title>
+	<script defer src="app.js"></script>
+	<script>
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage))) {
+			document.documentElement.classList.add('dark')
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+	</script>
+</head>
+
+<body class="dark:bg-primary-dark bg-slate-300 text-primary-dark dark:text-stone-300">
+	<!--Navigation-->
+	<header class="fixed right-0 flex justify-end items-center h-screen ">
+		<nav id="navbar" class="h-fit p-4 w-full">
+			<ul class="dark:text-cyan-500 ">
+				<li class="">
+					<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
+						href="#welcome-section">
+						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+							<path
+								d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+						</svg>
+					</a>
+				</li>
+				<li class="">
+					<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
+						href="#about-me">
+						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+							<path
+								d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z" />
+						</svg>
+					</a>
+				</li>
+				<li class="">
+					<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
+						href="#projects-section">
+						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							fill="currentColor" class="bi bi-calendar2-check-fill" viewBox="0 0 16 16">
+							<path
+								d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zm-2.6 5.854a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+						</svg>
+					</a>
+				</li>
+				<li class="">
+					<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md hover:bg-cyan-700"
+						href="#contacts">
+						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+							<path
+								d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+						</svg>
+					</a>
+				</li>
+				<li class="absolute bottom-0">
+					<a id="dark-mode-btn"
+						class="flex items-center p-3 my-3 rounded-full drop-shadow-md hover:bg-cyan-700" href="#">
+						<svg id="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							fill="currentColor" class="hidden animate-bounce" viewBox="0 0 16 16">
+							<path
+								d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+						</svg>
+						<svg id="light-mode-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							fill="currentColor" class="hidden animate-bounce" viewBox="0 0 16 16">
+							<path
+								d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="z-50">
+		<!--WELCOME SECTION-->
+		<section id="welcome-section" class="h-screen w-full flex items-center justify-center px-8">
+			<div class="max-w-4xl">
+				<h1 id="title"
+					class="text-[10vw] leading-tight md:text-7xl font-extrabold sm:mb-4 drop-shadow-md text-primary-dark dark:text-inherit">
+					Hi,
+					it's me, Mario
+				</h1>
+				<h2
+					class="text-[10vw] md:text-7xl leading-tight font-extrabold mb-6 sm:mb-10 drop-shadow-md text-slate-600 dark:text-slate-400">
+					...
+					a JavaScript
+					developer
+				</h2>
+				<p id="subtitle" class="sm:text-lg italic text-slate-600 dark:text-slate-400 max-w-lg">I'm an
+					aspiring web developer,
+					specializing in
+					technologies like JavaScript, Express, React and more. Currently, I'm working in
+					physical
+					media as a prepress specialist.</p>
+			</div>
+		</section>
+		<!-- ABOUT ME -->
+		<section id="about-me" class="min-h-screen w-full flex items-center justify-center p-4 sm:p-20">
+			<div class="py-2">
+				<h2 class="font-bold leading-tight text-4xl text-center mb-10">About me</h2>
+				<div class="flex flex-col md:flex-row gap-5">
+					<!-- Author Picture -->
+					<div class="mx-auto ">
+						<img id="portrait"
+							class="max-h-52 rounded-xl shadow-2xl hover:saturate-150 hover:rotate-3 ransition duration-150 ease-in-out"
+							src="./img/author.jpg" alt="Author's picture">
+					</div>
+					<!-- Short Bio -->
+					<div class="max-w-lg">
+						<p class="mb-2">Hello! My name is <b>Mario Yordanov</b> and I'm an aspiring web developer,
+							specializing in technologies like JavaScript, Express, React and more.</p>
+						<p class="mb-2">My professional experience is in print as a prepress specialist (six years and
+							counting),
+							occasionally leading my own projects as a managing editor.</p>
+						<p class="mb-2">All my free time nowadays is spend learning how to build dynamic, scalable and
+							fun to use web apps. I study JavaScript with the help of the great teachers at the
+							<a class="underline hover:text-amber-500" href="https://softuni.bg/">Software University</a>
+							and building
+							projects on my own.
+						</p>
+					</div>
+				</div>
+				<!-- Lists with skills -->
+				<div class="flex flex-col md:flex-row gap-5 md:gap-10 mt-6">
+					<div>
+						<h3 class="font-bold leading-tight text-lg my-2">Tech Stack
+						</h3>
+						<ul class="text-sm">
+							<li>MongoDB</li>
+							<li>Express</li>
+							<li>React</li>
+							<li>Node.js</li>
+							<li>Lit</li>
+							<li>Tailwind CSS</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold leading-tight text-lg my-2">Tools</h3>
+						<ul class="text-sm">
+							<li>Git + Github</li>
+							<li>Postman</li>
+							<li>Adobe InDesign</li>
+							<li>Adobe Illustrator</li>
+							<li>Adobe Photoshop</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold leading-tight text-lg my-2">Certifications</h3>
+						<ul class="text-sm">
+							<li class=" underline hover:text-amber-500">
+								<a href="https://freecodecamp.org/certification/mariothebread/responsive-web-design"
+									target="_blank">Responsive
+									Web Design (freeCodeCamp.org)
+								</a>
+							</li>
+							<li class=" underline hover:text-amber-500"><a
+									href="https://freecodecamp.org/certification/mariothebread/javascript-algorithms-and-data-structures"
+									target="_blank">JavaScript
+									Algorithms and Data Structures (freeCodeCamp.org)</a></li>
+							<li class=" underline hover:text-amber-500">
+								<a href="https://softuni.bg/certificates/details/116252/c63dad05"
+									target="_blank">Programming
+									Basics (Software University)</a>
+							</li>
+							<li class=" underline hover:text-amber-500">
+								<a href="https://softuni.bg/certificates/details/129440/80f03947"
+									target="_blank">Programming
+									Fundamentals (Software University)</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--PROJECTS SECTION-->
+		<section id="projects-section" class="min-h-screen w-full flex items-center justify-center p-4 py-20 sm:p-20">
+			<div class="lg:px-20 w-full">
+				<div>
+					<h2 class="font-bold leading-tight text-4xl text-center mb-10">Projects</h2>
+				</div>
+				<!-- Projects List -->
+				<div class="flex flex-col gap-6 2xl:mx-[12vw]">
+					<!-- Project 1 Social Media -->
+					<div class="flex flex-col md:flex-row gap-6 drop-shadow-xl">
+						<!-- Project Image -->
+						<div class="z-10">
+							<a href="https://github.com/NecroBread/Schmoozer" target="_blank">
+								<img class="max-h-80 rounded-xl shadow-2xl hover:saturate-150 hover:rotate-3 ransition duration-150 ease-in-out"
+									src="img/schmoo-screen2.jpg" alt="">
+							</a>
+						</div>
+						<!-- Project Description -->
+						<div
+							class="max-w-2xl bg-slate-300 dark:bg-primary-dark md:absolute right-0 top-[17%] drop-shadow-xl p-5 rounded-xl z-50">
+							<h3 class="text-2xl font-bold mb-2">Schmoo Social</h3>
+							<p class="mb-2"><b>Schmoo Social</b> is a simple social media web app for sharing the best
+								(and
+								shortest!) silly
+								jokes on the internet. It's created by me solely as a training exercise in web
+								development.</p>
+							<p class="mb-2"><b>Tech stack:</b> JavaScript, Lit (web components), Page (routing),
+								Back4App (backend),
+								webpack (bundler) </p>
+							<p>
+								<a class="underline hover:text-amber-500" href="https://schmoo-social.github.io/"
+									target="_blank">Live Demo</a>
+								&nbsp;
+								<a class="underline hover:text-amber-500"
+									href="https: //github.com/NecroBread/Schmoozer" target="_blank">Github Project</a>
+							</p>
+						</div>
+					</div>
+					<!-- Project 2 Sudoku -->
+					<div class="flex flex-col md:flex-row-reverse gap-6 drop-shadow-xl">
+						<!-- Project Image -->
+						<div class="z-10">
+							<a href="https://github.com/necrobreadtm/Sudoku" target="_blank">
+								<img class="max-h-80 rounded-xl shadow-2xl hover:saturate-150 hover:rotate-3 ransition duration-150 ease-in-out"
+									src="img/sudoku-screen.jpg" alt="">
+							</a>
+						</div>
+						<!-- Project Description -->
+						<div
+							class="max-w-2xl bg-slate-300 dark:bg-primary-dark md:absolute left-0 top-[17%] drop-shadow-xl p-5 rounded-xl z-50">
+							<h3 class="text-2xl font-bold mb-2">Sudoku</h3>
+							<p class="mb-2">Hey, you know <b>Sudoku</b>! The objective is to fill a 9 × 9 grid with
+								digits so that each column, row, and the nine 3 × 3 subgrids contain all of the digits
+								from 1 to 9.</p>
+							<p class="mb-2">An improvised experiment in JavaScript with three predefined difficulties
+								and an algorithm that checks if the solution is correct.</p>
+							<p>
+								<a class="underline hover:text-amber-500" href="https://github.com/necrobreadtm/Sudoku"
+									target="_blank">Live Demo</a>
+								&nbsp;
+								<a class="underline hover:text-amber-500"
+									href="https: //github.com/NecroBread/Schmoozer" target="_blank">Github Project</a>
+							</p>
+						</div>
+					</div>
+					<!-- End of list -->
+				</div>
+		</section>
+		<!-- CONTACTS SECTION -->
+		<section id="contacts" class=" h-screen flex flex-col justify-between">
+			<div class="flex flex-col items-center p-20">
+				<div class="">
+					<h2 class="font-bold leading-tight text-4xl text-center mb-7">Find me at</h2>
+					<ul class="flex gap-4 justify-center mb-7">
+						<li>
+							<a class="hover:text-amber-400" href="https://github.com/NecroBread" target="_blank">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+									class="bi bi-github" viewBox="0 0 16 16">
+									<path
+										d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a class="hover:text-amber-400" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+									class="bi bi-linkedin" viewBox="0 0 16 16">
+									<path
+										d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<h2 class="font-bold leading-tight text-3xl text-center mb-7">... or send me a message</h2>
+				<div class="contact-form">
+					<form class="text-gray-700" action="https://formspree.io/f/mwkyvlkj" method="POST">
+						<input type="hidden" name="_subject" value="New email from the website!">
+						<div class="grid-form mb-1">
+							<!--Name and email of sender-->
+							<input class="p-2 rounded-tl-lg" type="text" name="name" required placeholder="Name">
+							<input class="p-2 rounded-tr-lg" type="email" name="email" placeholder="Email" required>
+						</div>
+						<div class="mb-1">
+							<!--Message-->
+							<textarea class="p-2 w-full max-h-50 resize-none" placeholder="Message" name="message"
+								rows="10" required></textarea>
+						</div>
+						<button
+							class="w-full bg-amber-600 text-stone-200 p-2 rounded-b-lg font-bold drop-shadow-md hover:bg-amber-500"
+							type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+			<footer class="p-4 bottom-0">
+				<div>
+					<p class="text-center text-xs">© Created by Mario Yordanov, 2022</p>
+				</div>
+			</footer>
+		</section>
+	</main>
+</body>
+
+</html>
