@@ -13,57 +13,60 @@
 		if (localStorage.theme === 'dark' || (!('theme' in localStorage))) {
 			document.documentElement.classList.add('dark')
 		} else {
-			document.documentElement.classList.remove('dark') 
+			document.documentElement.classList.remove('dark')
 		}
 	</script>
 </head>
 
 <body class="dark:bg-primary-dark bg-slate-300 text-primary-dark dark:text-stone-300">
 	<!--Navigation-->
-	<header class="fixed right-0 flex justify-end items-center h-screen ">
+	<header class="z-50 fixed flex justify-end items-center w-full md:w-auto md:right-0 h-12 md:h-screen 
+		dark:bg-primary-dark bg-slate-300 text-primary-dark dark:text-stone-300">
 		<nav id="navbar" class="h-fit p-4 w-full">
-			<ul class="dark:text-cyan-500 ">
-				<li class="">
-					<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
-						href="#welcome-section">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-							fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-							<path
-								d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
-						</svg>
-					</a>
-				</li>
-				<li class="">
-					<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
-						href="#about-me">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-							fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
-							<path
-								d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z" />
-						</svg>
-					</a>
-				</li>
-				<li class="">
-					<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
-						href="#projects-section">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-							fill="currentColor" class="bi bi-calendar2-check-fill" viewBox="0 0 16 16">
-							<path
-								d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zm-2.6 5.854a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
-						</svg>
-					</a>
-				</li>
-				<li class="">
-					<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md hover:bg-cyan-700"
-						href="#contacts">
-						<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-							fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-							<path
-								d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-						</svg>
-					</a>
-				</li>
-				<li class="absolute bottom-0">
+			<ul class="dark:text-cyan-500 flex justify-between md:block">
+				<div class="flex gap-6 md:block">
+					<li class="">
+						<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
+							href="#welcome-section">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+								fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+								<path
+									d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+							</svg>
+						</a>
+					</li>
+					<li class="">
+						<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
+							href="#about-me">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+								fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+								<path
+									d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z" />
+							</svg>
+						</a>
+					</li>
+					<li class="">
+						<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md  hover:bg-cyan-700"
+							href="#projects-section">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+								fill="currentColor" class="bi bi-calendar2-check-fill" viewBox="0 0 16 16">
+								<path
+									d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zm-2.6 5.854a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+							</svg>
+						</a>
+					</li>
+					<li class="">
+						<a class="flex items-center p-3 my-3 rounded-full drop-shadow-md hover:bg-cyan-700"
+							href="#contacts">
+							<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+								fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+								<path
+									d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+							</svg>
+						</a>
+					</li>
+				</div>
+				<li class="md:absolute md:bottom-0">
 					<a id="dark-mode-btn"
 						class="flex items-center p-3 my-3 rounded-full drop-shadow-md hover:bg-cyan-700" href="#">
 						<svg id="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -105,7 +108,7 @@
 			</div>
 		</section>
 		<!-- ABOUT ME -->
-		<section id="about-me" class="min-h-screen w-full flex items-center justify-center p-4 sm:p-20">
+		<section id="about-me" class="min-h-screen w-full flex items-center justify-center p-4 py-20 sm:p-20">
 			<div class="py-2">
 				<h2 class="font-bold leading-tight text-4xl text-center mb-10">About me</h2>
 				<div class="flex flex-col md:flex-row gap-5">
@@ -280,8 +283,8 @@
 				</div>
 		</section>
 		<!-- CONTACTS SECTION -->
-		<section id="contacts" class=" h-screen flex flex-col justify-between">
-			<div class="flex flex-col items-center p-20">
+		<section id="contacts" class=" h-screen flex flex-col justify-between p-4 py-20 sm:p-20">
+			<div class="flex flex-col items-center ">
 				<div class="">
 					<h2 class="font-bold leading-tight text-4xl text-center mb-7">Find me at</h2>
 					<ul class="flex gap-4 justify-center mb-7">
@@ -309,14 +312,16 @@
 				<div class="contact-form">
 					<form class="text-gray-700" action="https://formspree.io/f/mwkyvlkj" method="POST">
 						<input type="hidden" name="_subject" value="New email from the website!">
-						<div class="grid-form mb-1">
+						<div>
 							<!--Name and email of sender-->
-							<input class="p-2 rounded-lg" type="text" name="name" required placeholder="Name">
-							<input class="p-2 rounded-lg" type="email" name="email" placeholder="Email" required>
+							<input class="p-2 rounded-lg w-full my-1" type="text" name="name" required
+								placeholder="Name">
+							<input class="p-2 rounded-lg w-full my-1" type="email" name="email" placeholder="Email"
+								required>
 						</div>
-						<div class="mb-1">
+						<div>
 							<!--Message-->
-							<textarea class="p-2 w-full max-h-50 resize-none rounded-lg" placeholder="Message"
+							<textarea class="p-2 w-full max-h-50 resize-none rounded-lg my-1" placeholder="Message"
 								name="message" rows="10" required></textarea>
 						</div>
 						<button

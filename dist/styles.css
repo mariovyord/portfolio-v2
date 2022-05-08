@@ -517,6 +517,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.my-1{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .mb-6{
   margin-bottom: 1.5rem;
 }
@@ -565,6 +570,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.h-12{
+  height: 3rem;
 }
 
 .max-h-52{
@@ -904,6 +913,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 768px){
   .md\:absolute{
     position: absolute;
+  }
+
+  .md\:right-0{
+    right: 0px;
+  }
+
+  .md\:bottom-0{
+    bottom: 0px;
+  }
+
+  .md\:block{
+    display: block;
+  }
+
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:h-screen{
+    height: 100vh;
+  }
+
+  .md\:w-auto{
+    width: auto;
   }
 
   .md\:flex-row{
