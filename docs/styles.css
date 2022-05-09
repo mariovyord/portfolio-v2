@@ -474,6 +474,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: fixed;
 }
 
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
 .right-0{
   right: 0px;
 }
@@ -488,6 +496,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bottom-0{
   bottom: 0px;
+}
+
+.bottom-12{
+  bottom: 3rem;
 }
 
 .z-50{
@@ -536,6 +548,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-7{
   margin-bottom: 1.75rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
 }
 
 .inline{
