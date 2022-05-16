@@ -604,10 +604,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 42rem;
 }
 
-.transform{
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 @-webkit-keyframes bounce{
   0%, 100%{
     transform: translateY(-25%);
@@ -698,26 +694,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
-.bg-orange-50{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 247 237 / var(--tw-bg-opacity));
-}
-
 .bg-amber-600{
   --tw-bg-opacity: 1;
   background-color: rgb(217 119 6 / var(--tw-bg-opacity));
 }
 
-.fill-white{
-  fill: #fff;
+.fill-primary-dark{
+  fill: #0a192f;
 }
 
 .fill-slate-300{
   fill: #cbd5e1;
-}
-
-.fill-primary-dark{
-  fill: #0a192f;
 }
 
 .p-4{
@@ -888,20 +875,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(10 25 47 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:fill-primary-dark{
-  fill: #0a192f;
-}
-
-.dark .dark\:fill-white{
-  fill: #fff;
-}
-
 .dark .dark\:fill-stone-300{
   fill: #d6d3d1;
 }
 
-.dark .dark\:fill-slate-300{
-  fill: #cbd5e1;
+.dark .dark\:fill-primary-dark{
+  fill: #0a192f;
 }
 
 .dark .dark\:text-stone-300{
