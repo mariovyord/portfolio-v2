@@ -1,13 +1,13 @@
 {
-	"name": "portfolio-v2",
+	"name": "portfolio",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Personal Website made with Tailwind CSS",
 	"main": "script.js",
 	"scripts": {
 		"build:css": "tailwind build -i src/styles.css -o docs/styles.css --watch"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Mario Yordanov",
 	"license": "ISC",
 	"devDependencies": {
 		"tailwindcss": "^3.0.24"
