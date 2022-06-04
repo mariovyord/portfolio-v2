@@ -19,5 +19,11 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [],
+	plugins: [
+		function ({ addVariant }) {
+			addVariant('child', '& > *');
+			addVariant('last-child', '& > *:last-child');
+			addVariant('child-hover', '& > *:hover');
+		}
+	],
 }
